@@ -2,12 +2,14 @@ version: "3"
 services:
   strapi:
     image: strapi/strapi
+    container_name: strapi
     volumes:
       - ./strapi-project:/srv/app
     ports:
       - "1337:1337"
   pod:
     image: theempire/mothership-pod
+    container_name: mothership-pod
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/ubuntu/mothership-pod-config/env.list:/home/ubuntu/mothership-pod-config/env.list
