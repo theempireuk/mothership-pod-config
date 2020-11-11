@@ -1,0 +1,13 @@
+Launch EC2
+SSH in
+Stop strapi
+Docker system prune to remove container
+Sed domain name in to init-letsencrypt and app.conf
+Docker-compose nginx/certbot/strapi
+Stop nginx/certbot
+Run init-letsencrypt 
+
+Only works when doing the above from host
+Very close with running it from within mothership pod.
+Getting error about not being to write to /etc/letsencrypt... when running init-letsencrypt.sh .
+Think I need to volume mount more folders to mothership pod?
