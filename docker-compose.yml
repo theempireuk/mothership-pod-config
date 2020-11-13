@@ -13,6 +13,9 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/ubuntu/mothership-pod-config/env.list:/home/ubuntu/mothership-pod-config/env.list
-      - /home/ubuntu/mothership-pod-config/nginx:/nginx
+      - ./nginx:/usr/src/pod/nginx
+      - ./data/nginx:/usr/src/pod/nginx/data/nginx
+      - ./data/certbot/conf:/usr/src/pod/nginx/data/certbot/conf
+      - ./data/certbot/www:/usr/src/pod/nginx/data/certbot/www
     ports:
       - "3000:3000"
