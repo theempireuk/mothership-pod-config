@@ -78,3 +78,8 @@ echo
 
 echo "### Reloading nginx ..."
 docker-compose exec nginx nginx -s reload
+
+# Additional motherhsip stuff I've added
+echo "### Docker composing it up"
+docker-compose down
+docker-compose up -d
